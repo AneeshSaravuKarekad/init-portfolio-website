@@ -1,0 +1,425 @@
+
+:root{
+    --bg-clr-primary: hsl(0, 0%, 75%);
+    --bg-clr-light: hsl(0, 0%, 85%);
+
+    --text-clr-light: hsl(0, 0%, 30%);
+    --text-clr-hover: hsl(0, 0%, 0%);
+    --about-link-text: hsl(0, 0%, 10%);
+
+    --botton-primary-clr: hsl(0, 0%, 50%);
+    --button-text-clr:hsl(0, 0%, 90%);
+    --button-hover-bg-clr :hsl(0, 0%, 35%);
+    --button-hover-text-clr: hsl(0, 0%, 100%);
+    --button-box-shadow: rgba(0, 0, 0, 0.25);
+    
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-size: 1rem;
+    font-family: 'Lato', sans-serif;
+    background-color: var(--bg-clr-primary);
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+p{
+    color: var(--text-clr-light);
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrapper{
+    display: flex; 
+    flex-flow: column nowrap;
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+}
+
+main {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+}
+/* ------------------------ */
+/* BACKGROUND ANIMATION     */
+/* ------------------------ */
+
+@keyframes color-change {
+    from {
+        fill: #ffff64;
+    }
+    to {
+        fill: #FFBD33;
+    }
+}
+
+.sun {
+    animation-duration: 4s;
+    animation-name: color-change;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+
+/* ------------------------ */
+/* LOGO DESIGN              */
+/* ------------------------ */
+
+.logo {
+    font-family: 'Rampart One', cursive;
+    font-size: 4rem;
+}
+
+/* ------------------------ */
+/* LINK DECORATION          */
+/* ------------------------ */
+
+a{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+
+.navigation-list__item > a {
+    color: var(--text-clr-light);
+}
+.navigation-list__item > a:hover, a:focus {
+    color: var(--text-clr-hover);
+}
+.navigation-list__item-start--active{
+    padding-bottom: 2px;
+    border-bottom: solid 5px var(--botton-primary-clr);
+    border-bottom-left-radius: 10px;
+}
+.navigation-list__item-mid--active{
+    padding-bottom: 2px;
+    border-bottom: solid 5px var(--botton-primary-clr);
+}
+.navigation-list__item-end--active{
+    padding-bottom: 2px;
+    border-bottom: solid 5px var(--botton-primary-clr);
+    border-bottom-right-radius: 10px;
+}
+
+.about-page-container  a {
+    color: var(--about-link-text);
+    font-weight: 700;
+}
+.about-page-container  a:hover {
+    text-decoration: underline;
+}
+
+/* ------------------------ */
+/* BUTTON DESIGN            */
+/* ------------------------ */
+.button {
+    display: inline-block;
+    border: none;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0px 8px 15px var(--button-box-shadow);
+}
+
+.button-primary {
+    background-color: var(--botton-primary-clr);
+    color: var(--button-text-clr);
+    margin-top: 2rem;
+    margin-right: 1rem;
+    
+}
+
+.button-primary:hover {
+    background-color: var(--button-hover-bg-clr);
+    color: var(--button-hover-text-clr);
+    transition-duration: 0.5s;
+    transform: scale(1.2);
+    transition-duration: 0.75s;
+}
+
+.button-download a{
+    color: var(--button-text-clr);
+}
+/* ------------------------ */
+/* HEADER DESIGN            */
+/* ------------------------ */
+
+.page-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-clr-light);
+    padding:0 2rem;
+}
+
+.navigation-list {
+    display: flex;
+    margin-left: auto;
+    gap: 1rem;
+}
+
+.navigation-list__item > a {
+    font-size: 1.25rem;
+}
+
+@media all and (max-width: 630px) {
+    .page-header, .navigation-list{
+        flex-direction: column;
+        border-bottom-left-radius: 0;
+        
+    }
+    .navigation-list__item-end--active {
+        border-bottom-right-radius: 0;
+    }
+
+    .navigation-list__item-start--active {
+        border-bottom-left-radius: 0;
+    }
+}
+
+/* ------------------------ */
+/* MAIN PROFILE DESIGN      */
+/* ------------------------ */
+
+.profile {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 5rem;
+}
+.profile img {
+    max-width: 250px;
+    width: 100%;
+}
+
+.profile-item {
+    padding:2rem;
+}
+
+.about-page-link-container{
+    display: flex;
+    align-items: top;
+    gap:1rem;
+}
+
+hr {
+    border: 1px solid var(--botton-primary-clr);
+}
+
+/* ------------------------ */
+/* FOOTER DESIGN            */
+/* ------------------------ */
+
+.page-footer{
+    width: 100%;
+    background-color: var(--bg-clr-light);
+    text-align: center;
+    padding-top: 3rem;
+}
+
+
+.footer-container {
+    display: inline-block;
+    margin: auto;
+}
+.footer-container__item {
+    padding-bottom: 0.5rem;
+}
+.socials .linkedin, .twitter, .github {
+    padding-inline: 0.5rem;
+}
+
+.socials a:hover, 
+.socials img:hover {
+    transform: scale(1.2);
+    transition-duration: 0.4s;
+} 
+.about-page {
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-table {
+    margin: 1rem auto;
+}
+
+.skill-table__item .column1, .column2{
+    padding-right: 5rem;
+    font-weight: 700;
+}
+.column3 {
+    font-weight: 700;
+}
+td, tr {
+    text-align: center;
+}
+
+/* ------------------------ */
+/* ANIMATION                */
+/* ------------------------ */
+
+@keyframes color-change {
+    from {
+        fill: #EDC655;
+    }
+    to {
+        fill: #ed9255;
+    }
+}
+
+.sun {
+    animation: color-change 4s infinite alternate linear;
+}
+
+@keyframes cloud-move {
+    from {
+        transform: translate(0, 50px);
+    }
+    to {
+        transform: translate(200px, 50px);
+    }
+}
+.cloud-front {
+    animation-duration: 30s;
+    animation-name: cloud-move;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+@keyframes cloud-move-reverse {
+    from {
+      transform: translate(446px, 48px);
+    }
+    to {
+      transform: translate(100px, 48px);
+    }
+}
+
+.cloud-back {
+    animation: 34s cloud-move-reverse infinite alternate linear;
+}
+  
+/* ------------------------ */
+/* FORM DESIGN              */
+/* ------------------------ */
+
+input, textarea {
+    width: 100%;
+    padding: 0.75rem 1.25rem;
+    margin: 0.5rem 0;
+    box-sizing: border-box;
+    border: solid var(--botton-primary-clr); 
+    border-radius: 10px;
+}
+
+.button-submit{
+    font-size: 1rem;
+}
+
+.button-submit:hover{
+    font-weight: 700;
+    transform: scale(1.1);
+    transition-duration: 0.75s;
+}
+
+/* ------------------------ */
+/* GRID LAYOUT              */
+/* ------------------------ */
+
+.grid__item {
+    display: inline-block;
+}
+
+.grid__item > a{
+    color: var(--about-link-text);
+    font-weight: 700;
+    text-decoration: underline;
+}
+.grid__item > a:hover{
+    color: var(--text-clr-hover);
+    text-decoration: none;
+}
+
+@supports (display: grid) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+        margin: 0;
+    }
+    .grid__item {
+        background-color: lightgray;
+        width: auto;
+        min-height: auto;
+        margin: 0;
+        padding: 1rem;
+        border-radius: 20px;
+    }
+    .grid__item:last-child {
+        grid-column: 3 / 3;
+        grid-row: 1/3;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media all and (min-width: 500px) and (max-width: 750px){
+    .grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media all and (max-width: 750px) {
+    .grid {
+      grid-gap: 10px;
+    }
+    .grid__item:last-child {
+      grid-column: auto / auto;
+      grid-row: auto / auto;
+    }
+    h1 {
+      font-size: 22px;
+    }
+    h2{ 
+        font-size: 16px;
+    }
+  }

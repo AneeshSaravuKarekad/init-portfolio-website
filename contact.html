@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.production.css" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="page-header">
+        <a href="index.html" class="page-header__item logo">ANEESH</a>
+        <nav class="page-header__item main-navigation">
+          <ul role="menubar" class="navigation-list">
+            <li role="presentation" class="navigation-list__item">
+              <a href="index.html">Home</a>
+            </li>
+            <li role="presentation" class="navigation-list__item">
+              <a href="about.html">About me</a>
+            </li>
+            <li
+              role="presentation"
+              class="navigation-list__item navigation-list__item-mid--active"
+            >
+              <a href="contact.html">Contact</a>
+            </li>
+            <li role="presentation" class="navigation-list__item">
+              <a href="work.html">Work</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <form action="" method="post" class="contact-form">
+          <div class="email">
+            <label class="contact-label" for="email">Email</label>
+            <input type="text" name="email" id="email" required />
+          </div>
+
+          <div class="telephone">
+            <label for="telephone" class="contact-label">Telephone</label>
+            <input
+              type="tel"
+              name="telephone"
+              id="telephone"
+              pattern="\d{3}[\-]\d{3}[\-]\d{4}"
+            />
+          </div>
+
+          <div class="message">
+            <label for="message-box" class="contact-label">Message</label>
+            <textarea
+              type="textarea"
+              maxlength="240"
+              name="message"
+              id="message-box"
+              required
+            >
+            </textarea>
+          </div>
+
+          <button type="submit" class="button button-submit">Submit</button>
+        </form>
+      </main>
+      <footer class="page-footer">
+        <div class="footer-container">
+          <p class="footer-container__item">Find me on</p>
+          <div class="socials footer-container__item">
+            <a href="#" class="twitter"
+              ><img src="images/twitter_icon.svg" alt="twitter"
+            /></a>
+            <a href="#" class="linkedin"
+              ><img src="images/linkedin_icon.svg" alt="linkedin"
+            /></a>
+            <a href="#" class="github"
+              ><img src="images/github_icon.svg" alt="github"
+            /></a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="js/tota11y.min.js"></script>
+  </body>
+</html>
