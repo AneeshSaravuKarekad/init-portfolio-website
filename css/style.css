@@ -50,8 +50,9 @@ p{
     color: var(--text-clr-light);
 }
 
-img {
+img, svg {
     max-width: 100%;
+    height: auto;
 }
 
 .wrapper{
@@ -222,6 +223,12 @@ ul{
     align-items: center;
     margin: 0 auto;
     margin-top: 5rem;
+}
+
+@media all and (max-width: 500px) {
+    .profile{
+        flex-direction: column;
+    }
 }
 .profile img {
     max-width: 250px;
